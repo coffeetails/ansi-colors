@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>256-color mode</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>✨</text></svg>">
+</head>
+<body>
+<!-- color sauce https://en.wikipedia.org/wiki/ANSI_escape_code#8-bit -->
+<header>
+    <div class="headerWrapper headerTop">
+        <p>A small illustration of the 8-bit ANSI colors.</p>
+        <button class="toggleLayout">Animate</button>
+    </div>
+    <div class="headerWrapper escapeCodesWrapper">
+        <p>Background: </p>
+        <p>ESC[48:5:<span id="bgCode">__</span>m</p>
+        <p id="bgHex">#______</p>
+        <p>Foreground: </p>
+        <p>ESC[38:5:<span id="fgCode">__</span>m</p>
+        <p id="fgHex">#______</p>
+    </div>
+</header>
+
+<div class="colorscaleWrapper">
+    <section class="colorscale colorscaleDark"></section>
+    <section class="colorscale colorscaleLight"></section>
+</div>
+
+<main id="cardbox" class="hidden">
+    <section class="card cardFlat"></section>
+    <section class="card cardFlat"></section>
+    <section class="card cardFlat"></section>
+    <section class="card cardFlat"></section>
+    <section class="card cardFlat"></section>
+    <section class="card cardFlat"></section>
+</main>
+
+<section class="colorscale colorscaleGray"></section>
+
+<script src="256_color_sections.js"></script>
+<script src="script.js"></script> 
+</body>
+</html> 
